@@ -1,10 +1,16 @@
 
-query viewerInfo {
+query viewerInfo($isOwner: Boolean!) {
   viewer {
-    login,
-    bio,
-    id,
+    login
+    bio
+    id
     name
+    starredRepositories(ownedByViewer: $isOwner, last: 5) {
+      nodes {
+        id
+        name
+      }
+    }
     lastFollowers: followers(last : 3) {
       nodes {
         ...userInfo
