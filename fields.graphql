@@ -1,8 +1,15 @@
+
 {
   viewer {
     login,
     bio,
     id,
     name
+    followers(last : 3) {
+      nodes {
+        id,
+        bio
+      }
+    }
   }
 }
