@@ -1,3 +1,7 @@
 {
-    "isOwner": false
+    "isOwner": false,
+    "input": {
+      "clientMutationId": "10101020",
+      "message": "Demo"
+    }
   }
