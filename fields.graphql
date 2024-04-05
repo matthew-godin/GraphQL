@@ -7,15 +7,20 @@
     name
     lastFollowers: followers(last : 3) {
       nodes {
-        id,
-        bio
+        ...userInfo
       }
     },
     firstFollowers: followers(first : 3) {
       nodes {
-        id,
-        bio
+        ...userInfo
       }
     }
   }
+}
+
+fragment userInfo on User {
+	id
+  bio
+  bioHTML
+  avatarUrl
 }
