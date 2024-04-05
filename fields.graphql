@@ -5,7 +5,13 @@
     bio,
     id,
     name
-    followers(last : 3) {
+    lastFollowers: followers(last : 3) {
+      nodes {
+        id,
+        bio
+      }
+    },
+    firstFollowers: followers(first : 3) {
       nodes {
         id,
         bio
